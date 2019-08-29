@@ -1,0 +1,29 @@
+#配置服务器信息，默认可不配
+#http://localhost:80/sb2/...
+server:
+  port: 8080 #端口号 默认8080
+  servlet:
+    context-path: /sbm  #站点根路径名称 默认没有
+
+
+spring:
+#配置http请求编码
+  http:
+    encoding:
+      charset: utf-8  #默认是utf-8
+      enabled: true
+      force: true
+
+#配置jsp为视图技术  默认是theamleaf视图技术
+  mvc:
+    view:
+      prefix: /WEB-INF/
+      suffix: .jsp
+  datasource:
+     driver-class-name: com.mysql.jdbc.Driver
+     url: jdbc:mysql://localhost:3306/db1901?serverTimezone=Asia/Shanghai
+     username: root
+     password: root
+mybatis:
+  config-location: classpath:conf.xml
+  
